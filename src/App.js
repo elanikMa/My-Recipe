@@ -17,7 +17,6 @@ useEffect(() =>  {
   const response = await fetch (`https://api.edamam.com/search?q=${wordSubmit}&app_id=${API_ID}&app_key=${API_KEY}`);
   const data = await response.json();
   setMyRecipe(data.hits);
-  console.log(data.hits);
 }
 fetchData();
 }, [wordSubmit] )
