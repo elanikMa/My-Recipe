@@ -27,7 +27,6 @@ setWordSubmit(mySearch);
 }
 
 const myRecipeSearch = (e) => {
-console.log(e.target.value);
 setMySearch(e.target.value);
 }
 return (
