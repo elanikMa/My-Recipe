@@ -14,7 +14,6 @@ const [wordSubmit, setWordSubmit] = useState('muffin');
 
 useEffect(() =>  {
   async function fetchData() {
-  // const response = await fetch (`https://api.edamam.com/search?q=cake&app_id=${API_ID}&app_key=${API_KEY}`);
   const response = await fetch (`https://api.edamam.com/search?q=${wordSubmit}&app_id=${API_ID}&app_key=${API_KEY}`);
   const data = await response.json();
   setMyRecipe(data.hits);
