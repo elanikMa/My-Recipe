@@ -1,13 +1,4 @@
-import { useState } from "react";
-
 function MyRecipeComponent({labelProps, caloriesProps, imageProps, ingredientsProps, urlRecipeProps}) {
-
-const[directions, setDirections] = useState('DIRECTIONS');
-
-function functionDirections() {
-    setDirections({urlRecipeProps});
-}
-
 
 return(   
 <div className='allContainer'>
@@ -22,7 +13,12 @@ return(
     <li key={index}> {element} </li>
 ))}  
 </ul>
-<h3 onClick={functionDirections}> {directions} </h3>
+
+<button  className="button-directions">
+    <a href={ urlRecipeProps } target="_blank" rel="noreferrer"> 
+    directions
+    </a>
+</button>
 </div>
 </div>
 )
